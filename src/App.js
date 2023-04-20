@@ -9,7 +9,7 @@ function App() {
   const [inputCity, setinputCity] = useState("");
   const getWeatherDetails = (city) => {
     if (!city) return;
-    const apiURL = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
+    const apiURL = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
     axios
       .get(apiURL)
       .then((res) => {
