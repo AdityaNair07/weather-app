@@ -42,6 +42,7 @@ function App() {
           className="searchbar"
           onChange={handleChange}
           value={inputCity}
+          placeholder="Enter place name.."
         />
         <button className="searchBtn" onClick={handleSearch}>
           Search
@@ -59,11 +60,15 @@ function App() {
               <td>{data.current.condition.text}</td>
             </tr>
             <tr>
-              <td>Max: </td>
+              <td>Current Temp: </td>
+              <td>{data.current.temp_c}</td>
+            </tr>
+            <tr>
+              <td>Max Temp: </td>
               <td>{data.forecast.forecastday[0].day.maxtemp_c}°C</td>
             </tr>
             <tr>
-              <td>Min: </td>
+              <td>Min Temp: </td>
               <td>{data.forecast.forecastday[0].day.mintemp_c}°C</td>
             </tr>
           </table>
